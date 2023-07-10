@@ -30,3 +30,8 @@ jobs:
       with:
         generate-branches-badge: true
         jacoco-csv-file: "**/testDebugUnitTestCoverage.csv"
+    - name: upload coverage report
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        name: coverage report
+        path: app/build/reports/jacoco/html
